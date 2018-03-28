@@ -18,15 +18,16 @@ $sql2 = "CREATE TABLE posts(
         `id` INT(11) AUTO_INCREMENT,
         `user_id` INT(11) UNSIGNED NOT NULL,
         `title` VARCHAR(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
-        author VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
-        detail TEXT(500) CHARACTER SET utf8 COLLATE utf8_general_ci,
-        update_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+        `author` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+        `detail` TEXT(500) CHARACTER SET utf8 COLLATE utf8_general_ci,
+        `update_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
         PRIMARY KEY (`id`)
     )";
 
 $sql3 = "ALTER TABLE posts
-        ADD COLUNM create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP";
-        
+        ADD create_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP";
 
+$sql4 = "ALTER TABLE posts 
+        ADD FOREIGN KEY (user_id) REFERENCES users(id)";
 
 ?>

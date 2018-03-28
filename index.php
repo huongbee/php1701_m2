@@ -7,10 +7,23 @@ $sql = "CREATE TABLE `php1701`.`users` (
      `birthdate` DATE NULL DEFAULT NULL , 
      `fullname` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL , 
      `gender` VARCHAR NULL DEFAULT 'nam' , 
-     `update_at` INT NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+     `update_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
      PRIMARY KEY (`id`), 
      UNIQUE `unique` (`email`)
 ) ENGINE = InnoDB COMMENT = 'luu thong tin user';";
 
 //id, user_id, title, author, detail, create_at
+
+$sql2 = "
+    CREATE TABLE posts(
+        id INT(11) AUTO_INCREMENT,
+        user_id INT(11) UNSIGNED NOT NULL,
+        title VARCHAR(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+        author VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+        detail TEXT(500) CHARACTER SET utf8 COLLATE utf8_general_ci,
+        update_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+        PRIMARY KEY (`id`)
+    )
+";
+
 ?>

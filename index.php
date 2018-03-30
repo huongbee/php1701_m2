@@ -30,4 +30,8 @@ $sql3 = "ALTER TABLE posts
 $sql4 = "ALTER TABLE posts 
         ADD FOREIGN KEY (user_id) REFERENCES users(id)";
 
+
+
+
+
 ?>

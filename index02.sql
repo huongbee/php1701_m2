@@ -47,6 +47,11 @@ ON dieukien_lienket
 INSERT INTO users(email,password,birthdate,fullname,gender,address)
 VALUES ('huong@gmail.com','112121','2017-02-31','Huong Huong','female','92 Le Thi Rieng')
 
+--https://dev.mysql.com/doc/refman/5.7/en/data-types.html
+--https://dev.mysql.com/doc/refman/5.7/en/functions.html
+--https://dev.mysql.com/doc/refman/5.7/en/sql-syntax-data-definition.html
+
+
 
 
 

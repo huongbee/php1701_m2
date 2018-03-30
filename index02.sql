@@ -45,7 +45,8 @@ ON dieukien_lienket
 
 
 INSERT INTO users(email,password,birthdate,fullname,gender,address)
-VALUES ('huong@gmail.com','112121','2017-02-31','Huong Huong','female','92 Le Thi Rieng')
+VALUES ('huong02@gmail.com','112121','2017-05-31','Huong Huong','female','92 Le Thi Rieng')
+
 
 --https://dev.mysql.com/doc/refman/5.7/en/data-types.html
 --https://dev.mysql.com/doc/refman/5.7/en/functions.html
@@ -53,7 +54,26 @@ VALUES ('huong@gmail.com','112121','2017-02-31','Huong Huong','female','92 Le Th
 
 
 
+UPDATE users
+SET birthdate = '2017-10-24',
+    address = "90 LTR"
+WHERE email = 'huong@gmail.com'
+
+DELETE FROM users
+WHERE email LIKE "%huong%" 
 
 
+SELECT * FROM users
+WHERE id=6
+
+
+SELECT email,fullname FROM users
+WHERE id=6
+
+SELECT * FROM `users`
+WHERE id =6 OR id=8
+
+SELECT * FROM `users`
+WHERE id IN(6,8)
 
 ?>

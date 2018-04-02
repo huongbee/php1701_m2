@@ -9,52 +9,71 @@ Y\'eau c\uc0\u7847 u: Th\u7921 c hi\u7879 n c\'e1c c\'e2u truy v\u7845 n sau tr\
 \
 1.  Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m\
 \
-\
-\
 1.1. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3 t\'ean T\'ean sp,\u272 \u417 n gi\'e1, H\'ecnh.\
-\
-\
 \
 3. Li\uc0\u7879 t k\'ea danh s\'e1ch kh\'e1ch h\'e0ng g\u7891 m c\'f3 c\'e1c th\'f4ng tin sau: t\'ean kh\'e1ch h\'e0ng, gi\u7899 i t\'ednh, \u273 \u7883 a ch\u7881 , \u273 i\u7879 n tho\u7841 i, \
 	danh s\'e1ch s\uc0\u7869  \u273 \u432 \u7907 c s\u7855 p t\u259 ng d\u7847 n theo t\'ean kh\'e1ch h\'e0ng.\
 \
 4. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3: T\'ean sp, M\'f4 t\u7843 , \u272 \u417 n gi\'e1, v\'e0 s\u7855 p x\u7871 p gi\u7843 m theo c\u7897 t \u273 \u417 n gi\'e1: \
+ORDER BY price DESC\
 \
 5. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3: T\'ean sp, M\'f4 t\u7843 , \u272 \u417 n gi\'e1. Ch\u7881  li\u7879 t k\'ea c\'e1c S\u7843 n ph\u7849 m s\'fap\
+WHERE name like \'91%s\'fap%\'92\
 \
 6. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m m\'e0 trong t\'ean sp c\'f3 t\u7915  \'91h\u7841 t sen' v\'e0 gi\'e1 l\u7899 n h\u417 n 160000:\
+WHERE name like \'91%s\'fap%\'92 AND price > 160000\
 \
 7. Li\uc0\u7879 t k\'ea danh s\'e1ch c\'e1c S\u7843 n ph\u7849 m c\'f3 \u273 \u417 n gi\'e1 t\u7915  50.000 VN\u272  \u273 \u7871 n 100.000 VN\u272  :\
+C1: WHERE price BETWEEN 50000 AND 100000\
+C2: WHERE price >= 50000 AND price <= 100000\
 \
 9. Li\uc0\u7879 t k\'ea c\'e1c s\u7843 n ph\u7849 m c\'f3 \u273 \u417 n gi\'e1 l\u7899 n h\u417 n 150.000 VN\u272 \
+WHERE price > 150000\
 \
 10. Li\uc0\u7879 t k\'ea th\'f4ng tin c\'e1c s\u7843 n ph\u7849 m c\'f3 t\'ean 'C\u417 m t\u7845 m', 'D\u432 a h\u7845 u', 'X\'f4i g\'e0'.\
+WHERE name LIKE \'91%C\uc0\u417 m t\u7845 m%\'92  OR name LIKE \'91%D\u432 a h\u7845 u%\'92 OR name LIKE \'91%X\'f4i g\'e0%\'92\
 \
 11. Cho bi\uc0\u7871 t t\'ean s\u7843 n ph\u7849 m, M\'f4 t\u7843 , \u273 \u417 n gi\'e1 c\u7911 a 10 s\u7843 n ph\u7849 m c\'f3 \u273 \u417 n gi\'e1 cao nh\u7845 t.\
+ORDER BY price DESC \
+LIMIT 0,10\
 \
 12. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3 t\'eansp, \u273 \u417 n gi\'e1, khuy\u7871 n m\'e3i.\
 \
+\
 13. Li\uc0\u7879 t k\'ea danh s\'e1ch kh\'e1ch h\'e0ng g\u7891 m c\'f3 c\'e1c th\'f4ng tin sau: t\'ean kh\'e1ch h\'e0ng, email, \u273 \u7883 a ch\u7881 , \u273 i\u7879 n tho\u7841 i.\
+\
 \
 14. Li\uc0\u7879 t k\'ea danh s\'e1ch lo\u7841 i s\u7843 n ph\u7849 m g\u7891 m c\'f3 c\'e1c th\'f4ng tin sau: t\'ean lo\u7841 i, m\'f4 t\u7843 , s\u7855 p t\u259 ng d\u7847 n theo t\'ean lo\u7841 i.\
 \
-15. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3: t\'ean s\u7843 n ph\u7849 m, M\'f4 t\u7843 . C\'f3 s\u7855 p t\u259 ng theo c\u7897 t t\'ean sp, v\'e0 s\u7855 p gi\u7843 m theo c\u7897 t \u273 \u417 n gi\'e1.\
+15. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3: t\'ean s\u7843 n ph\u7849 m, M\'f4 t\u7843 . C\'f3 s\u7855 p  s\u7855 p gi\u7843 m theo c\u7897 t \u273 \u417 n gi\'e1 v\'e0 t\u259 ng theo c\u7897 t t\'ean sp\
+ORDER BY  price DESC, name ASC\
+\
 \
 16. Li\uc0\u7879 t k\'ea danh s\'e1ch tin t\u7913 c: ti\'eau \u273 \u7873 , t\'f3m t\u7855 t. Ch\u7881  li\u7879 t k\'ea c\'e1c tin t\u7913 c c\'f3 ti\'eau \u273 \u7873  b\u7855 t \u273 \u7847 u l\'e0 'N'.\
+LIKE name \'93n%\'94\
 \
 17. Li\uc0\u7879 t k\'ea danh s\'e1ch c\'e1c s\u7843 n ph\u7849 m c\'f3 k\'fd t\u7921  cu\u7889 i c\'f9ng c\u7911 a sp l\'e0 'n'.\
+LIKE name \'93%n\'94\
+\
 \
 18. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m m\'e0 trong t\'ean s\u7843 n ph\u7849 m c\'f3 t\u7915  'g\'e0'.\
+\
 \
 20. Li\uc0\u7879 t k\'ea danh s\'e1ch c\'e1c s\u7843 n ph\u7849 m c\'f3 \u273 \u417 n gi\'e1 t\u7915  50.000 VN\u272  \u273 \u7871 n 150.000 VN\u272 \
 \
 21. Li\uc0\u7879 t k\'ea c\'e1c s\u7843 n ph\u7849 m c\'f3 n\u7897 i dung t\'f3m t\u7855 t ch\u7913 a 'n\u7845 m' v\'e0 '\u7899 t xanh', g\u7891 m c\'e1c th\'f4ng tin: t\'ean sp, \u273 \u417 n gi\'e1.\
 \
 22. Cho bi\uc0\u7871 t \u273 \u417 n gi\'e1 trung b\'ecnh c\u7911 a c\'e1c sp hi\u7879 n c\'f3 trong c\u7917 a h\'e0ng\
+SELECT AVG(price) AS dongiaTB FROM foods\
+SELECT max(price) AS dongiaMAX FROM foods\
+SELECT MIN(price) AS dongiaMIN FROM foods\
+SELECT COUNT(id) AS tongsoSP FROM foods\
+\
 \
 LI\'caN K\uc0\u7870 T B\u7842 NG\
 \
 2. Li\uc0\u7879 t k\'ea danh s\'e1ch s\u7843 n ph\u7849 m g\u7891 m c\'f3 t\'ean T\'ean lo\u7841 i, T\'ean sp, M\'f4 t\u7843 , \u272 \u417 n gi\'e1 v\'e0 s\u7855 p x\u7871 p T\'ean lo\u7841 i theo chi\u7873 u t\u259 ng d\u7847 n.\
+\
 \
 2.2. Truy v\uc0\u7845 n c\'f3 nh\'f3m v\'e0 th\u7889 ng k\'ea d\u7919  li\u7879 u. Y\'eau c\u7847 u: Th\u7921 c hi\u7879 n c\'e1c truy v\u7845 n sau\
 \

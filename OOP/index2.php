@@ -11,7 +11,7 @@ class Sinhvien{
         $this->mssv = $maso;
     }
 
-    function getMSSV2(){
+    public function getMSSV2(){
         return $this->getMSSV();
     }
 

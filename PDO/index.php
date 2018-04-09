@@ -13,6 +13,33 @@ try{
 
     // var_dump($result);
 
+    $sql = "SELECT * FROM users ";
+    $stmt = $connect->prepare($sql);
+    $result = $stmt->execute();
+    if($result){
+        //$user = $stmt->fetch();
+        //print_r($user);
+
+        $users = $stmt->fetchAll();
+
+        // echo "<pre>";
+        // print_r($users);
+        // echo "</pre>";
+
+        // foreach($users as $user){
+        //     echo $user['username'];
+        //     echo "<br>";
+        // }
+
+        $users[6]['username'];
+        //print_r($user);
+        //echo $user['username'];
+    }
+    else{
+        echo "Error";
+    }
+
+
 }
 catch(Exception $e){
     echo "Connect error ".$e->getMessage();

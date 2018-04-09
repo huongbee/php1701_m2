@@ -1,0 +1,92 @@
+body{
+    background-color: #f3f3f3;
+    margin: 0px
+}
+.header{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+.content{
+    width: 1200px;
+    margin: auto
+}
+.item{
+    float: left;
+    background-color: #fff;
+    /* width: 31.3333333%;
+    margin: 1%; */
+    width: 380px;
+    margin: 10px
+}
+.image img{
+    height: 180px;
+    margin-top: 25px
+}
+
+.image, .info{
+    float: left;
+}
+.image{
+    width: 40%
+}
+.info{
+    width:60%
+}
+.promotion{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red
+}
+.footer{
+    margin: 15px
+}
+.name, .price{
+    font-size: 20px;
+    font-weight: bold
+}
+.price{
+    color: red;
+}
+
+
+@media (max-width:1199px){
+    .content{
+        width: 1000px;
+    }
+    .item{
+        width:303px;
+        margin: 15px
+    }
+}
+@media (min-width:700px) and (max-width:1199px) {
+    .content{
+        width: 700px;
+    }
+    .item{
+        width:48%;
+        margin: 1%;
+    }
+}
+@media (max-width:699px){
+    .info{
+        display: none
+    }
+    .image{
+        width: 100%;
+    }
+    .image img{
+        width: 60%;
+        padding: 0 20%;
+        height: auto;
+    }
+    .footer{
+        text-align: center
+    }
+    .item{
+        width:48%;
+        margin: 1%;
+    }
+    .content{
+        width: 100%;
+    }
+}

@@ -20,18 +20,20 @@ try{
         //$user = $stmt->fetch();
         //print_r($user);
 
-        $users = $stmt->fetchAll();
+        $users = $stmt->fetchAll(PDO::FETCH_OBJ);
 
-        // echo "<pre>";
-        // print_r($users);
-        // echo "</pre>";
+        echo "<pre>";
+        print_r($users);
+        echo "</pre>";
 
+        $u = $users[6];
+        echo $u->username;
         // foreach($users as $user){
         //     echo $user['username'];
         //     echo "<br>";
         // }
 
-        $users[6]['username'];
+       // echo $users[6]['username'];
         //print_r($user);
         //echo $user['username'];
     }

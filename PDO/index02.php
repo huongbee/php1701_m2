@@ -44,7 +44,7 @@ function loadMoreRows($connect,$sql, $params=[]){
     }
     $result = $stmt->execute();
     if($result){
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
+        return $stmt->fetch(PDO::FETCH_OBJ);
     }
     return false;
 }

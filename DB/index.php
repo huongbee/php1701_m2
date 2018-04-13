@@ -6,8 +6,8 @@ $db = new DBConnect;
 
 //$query = "DELETE FROM users WHERE id=33";
 $query = "INSERT INTO users(
-        `username`,
-        `password`,
+        username,
+        password,
         fullname,
         birthdate,
         gender,
@@ -16,9 +16,9 @@ $query = "INSERT INTO users(
         phone
     ) 
     VALUES(?,?,?,?,?,?,?,?)";
-$params = ['admin02','13212121','Huong','1996-04-13','nữ', "LTR Q1",'admin02@gmail.com','23456788765'];
+$params = ['admin04','13212121','Huong','1996-04-13','nữ', "LTR Q1",'admin04@gmail.com','23456788765'];
 
-$result = $db->executeQuery($query);
+$result = $db->executeQuery($query,$params);
 // if($result) echo 'success';
 // else echo 'error';
 

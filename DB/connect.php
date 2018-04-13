@@ -14,20 +14,45 @@ class DBConnect{
         }
     }
 
+    function setStatement($query,$params = []){
+        $stmt = $this->connect->prepare($query);
+
+        foreach($params as $key => $p){
+            $stmt->bindValue(($key+1),$p);             
+        }
+        return $stmt;
+    }
+
     //INSERT | UPDATE | DELETE
     function executeQuery($query,$params = []){
-        $stmt = $this->connect->prepare($query);
-        foreach($params as $key => $p){
-            $stmt->bindParam($key+1,$p);             
-        }
+        $stmt = $this->setStatement($query,$params);
         return $stmt->execute(); //bool(true/false)
     }
 
 
 
     // SELECT 1 ROW
+    function loadOneRow($query,$params = []){
+        $stmt = $this->setStatement($query,$params);        
+        $result = $stmt->execute();
+        if($result){
+            return $stmt->fetch(PDO::FETCH_OBJ);
+        }
+        return false;
+    }
+
+
 
     // SELECT MORE ROWS
+    function LoadMoreRows(){
+        $stmt = $this->setStatement($query,$params);
+
+        $result = $stmt->execute();
+        if($result){
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        }
+        return false;        
+    }
 
 }
 

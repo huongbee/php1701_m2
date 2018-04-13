@@ -9,7 +9,7 @@ try{
     // VALUES('admin01','$pw','Admin 01','1998-09-12','nữ','LTR District 1','admin01@gmail.com','1212121212')";
     // //echo $sql;
 
-    // $result = $connect->exec($sql);
+    // $result = $connect->exec($sql); //false|0|>=1
 
     // var_dump($result);
 

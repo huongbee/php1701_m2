@@ -29,8 +29,6 @@ class DBConnect{
         return $stmt->execute(); //bool(true/false)
     }
 
-
-
     // SELECT 1 ROW
     function loadOneRow($query,$params = []){
         $stmt = $this->setStatement($query,$params);        
@@ -41,10 +39,8 @@ class DBConnect{
         return false;
     }
 
-
-
     // SELECT MORE ROWS
-    function LoadMoreRows(){
+    function LoadMoreRows($query,$params = []){
         $stmt = $this->setStatement($query,$params);
 
         $result = $stmt->execute();
